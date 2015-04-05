@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstraptweaks.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="//use.typekit.net/fbm3zrm.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <title>Celadore - Blog</title>
+                <script>
+            $(window).load( function() {
+                            console.log($(window).height())
+
+            function isOverflowed(element){
+                return element.height() > $(window).height();
+            }
+                if (isOverflowed($("body")) != true) {
+                 
+                   $("#bottomrow").css("position","fixed")
+                    $("#bottomrow").css("bottom","0px")
+                }
+            });
+        </script>
+	</head>
+	
+	<body>
+        <div class="container-fluid">
+            
+            <div class="row">
+                <div class="col-xs-2">
+                <h1 id="title">Celadore</h1>
+                    <div id="navBar">
+                <form action="/index.html">
+                    <input class="button" type="submit" id="home" value="Home">
+                </form>
+                    <br>
+                <form action="/music.html">
+                    <input class="button" type="submit" id="music" value="Music">
+                </form>
+                <br>
+                <form action="/videos.html">
+                    <input class="button" type="submit" id="videos" value="Videos">
+                </form>
+                    </div>
+                </div>
+                <div class="col-xs-9" id="maincol" style="background-color:rgba(207,0,0,0.7)">
+                    <br>
+                    <h1>Blog Post</h1>
+                    <h4>You guys send it to me and I post</h4>
+                    <p>Blah blah blah tones of text goes here: As they rounded a bend in the path that ran beside the river, Lara recognized the silhouette of a fig tree atop a nearby hill. The weather was hot and the days were long. The fig tree was in full leaf, but not yet bearing fruit.
+Soon Lara spotted other landmarks—an outcropping of limestone beside the path that had a silhouette like a man’s face, a marshy spot beside the river where the waterfowl were easily startled, a tall tree that looked like a man with his arms upraised. They were drawing near to the place where there was an island in the river. The island was a good spot to make camp. They would sleep on the island tonight.
+Lara had been back and forth along the river path many times in her short life. Her people had not created the path—it had always been there, like the river—but their deerskin-shod feet and the wooden wheels of their handcarts kept the path well worn. Lara’s people were salt traders, and their livelihood took them on a continual journey.
+
+<p>                </div>
+            </div> 
+            <div class="row" id="bottomrow">
+                <div class="col-xs-2">
+                </div>
+                <div class="col-xs-9">
+                    <BR>
+                <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fceladore&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:100px;" allowTransparency="true"></iframe>
+                <p id="signature">Created by Alex Pedersen - 2015 &copy</p>
+                </div>
+        </div>
+        </div>
+	</body>
+</html>

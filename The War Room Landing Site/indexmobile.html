@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+                <meta name="description" content="The War Room is an online war simulator game. Battle your friends and dominate the world.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>The War Room</title>
+        
+        <link rel="icon" type="image/png" href="favicon.png">
+        
+        <link rel="stylesheet" type="text/css" href="mainmobile.css">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        
+        <!-- Jquery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            function set_cookie( cookie_name, cookie_value, lifespan_in_days, valid_domain ) {
+                  var domain_string = valid_domain ? ("; domain=" + valid_domain) : '' ;
+                  document.cookie = cookie_name + "=" + encodeURIComponent( cookie_value ) +
+                      "; max-age=" + 60 * 60 * 24 * lifespan_in_days +
+                      "; path=/" + domain_string ;
+            }
+            function get_cookie ( cookie_name )
+            {
+              // http://www.thesitewizard.com/javascripts/cookies.shtml
+              var cookie_string = document.cookie ;
+              if (cookie_string.length != 0) {
+                var cookie_value = cookie_string.match ( '(^|;)[\s]*' + cookie_name + '=([^;]*)' );
+                return decodeURIComponent ( cookie_value[2] ) ;
+              }
+              return '' ;
+            }
+
+            $(document).ready( function(){
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) == true ) {
+                   window.location = "http://www.warroomgame.com/index.html";
+                }
+                $("#cssmenu").css("margin-left", ($("#navcol").width() - $("#cssmenu").width())/2)
+                if (get_cookie("visitor") != "true") {
+                    set_cookie("visitor","true", 365, "warroomgame.com")
+                }
+            })
+        </script>
+    </head>
+
+
+    <body>
+        <div class="container toplevel">
+            <div class="row">
+                <div id="maincol" class="col-lg-12">
+
+                        <img id="logo" src="thewarroom.svg" alt="The war Room">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 secondarycol" id="navcol">
+                    <h4 id="title">The War Room</h4>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <p>The War Room is a warfare simulator game. It is based around a zoomable map, divided into territories. The world is distributed in empires to the players. Each territory starts with one capital fortress. Throughout the game, players build additional fortresses and encampments. Resources (food, energy, population, militants, and money) are produced daily by an empire and traded between players. Territories are exchanged between empires when their capital fortresses are captured in battle. To win, a player must control the entire map.</p><br>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <h1 id="head1">Rule Your Empire</h1><BR>
+                        <p>Claim your empire and rule it with undisputed power. Your strategy and success depend directly on the geography and resources of your land. Every day at midnight, each territory in your empire produces goods. Throughout the day, some of these resources are consumed by the population to survive. To rule the world and win the game you must keep the balance of production and consumption in check.</p><br>
+                        <img class="bodyimage" src="fullmap.png"><br><br>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <h1 id="head1">Develop Your Territories</h1><BR>
+                        <p>Build fortresses and encampments in your territories to hold resources, trade, and battle. Encampments are cheap and temporary. They may be placed in any territory and are only visible to their owner. Fortresses are strongholds to defend territories and maintain power. They may be placed only in controlled territories and are visible to all players.</p><br>
+                        <img class="bodyimage" src="development.png"><br><br>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <h1 id="head1">Trade With Allies</h1><BR>
+                        <p>No territory is perfect. Scarcity of each resource varies throughout the map. Trade must be leveraged to build your empire and keep the population alive. Commerce costs money and takes time to complete. The price of a trade depends on the length of the route and the infrastructure in the territory. Any two things can be traded including information. If two players decide to trade secrets, resources can be "gifted" in an honor system agreement.</p><br>
+                        <img class="bodyimage" src="trade.png"><br><br>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <h1 id="head1">Battle With Enemies</h1><BR>
+                        <p>For the game to end, all territories must be controlled by one player: the winner. In each game you will start with an empire, made of certain territories. Only through battle may you expand your empire and dominate the world. Each territory starts with an army. Troops are exchanged at fixed rates for pieces in the games bellow. By battling a fortress or encampment successfully you win control of that location. Ownership of the territory lies in ownership of the capital fortress.</p><br>
+                        <img class="bodyimage" src="battle.png"><br><br>
+                        <h2 class="subhead bodysubhead">Battle on Land</h2><BR>
+                        <p> Play Battle on Land when fighting territories connected by land. It's chess; pretty self explanatory.</p><br>
+                        <img class="bodyimage" src="battleatland.png"><br><br>
+                        <h2 class="subhead bodysubhead">Battle at Sea</h2><BR>
+                        <p>Play Battle at Sea when fighting across oceans. Place your ships on the grid, and fire random shots at the enemy to sink their fleat.</p><br>
+                        <img class="bodyimage" src="battleatsea.png"><br><br>
+
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <h1 id="head1">Conspire Offline</h1><BR>
+                        <p>Originally, The War Room was going to be played on Reddit. Players would plan and collaborate outside of the game portal and only visit the site to take action. Even though in-game-chat is a feature, The War Room will only be at its most entertaining if friends give it life off the website.</p><br>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row nobottommargin">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <h1 id="head3">The Cost of War</h1>
+                        <p>As much as we'd all like to make The War Room free. Servers aren't free. And ads are ugly. The first month will come at no charge. No payment method necessary. No commitment required. After that we hope the game is worth the price bellow.</p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row nobottommargin">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2 secondarycol content">
+                        <h2 class="subhead" id="head3">1 Month</h2>
+                        <img class="imagecenter" src="month.png">
+                                                <h2 class="subhead" id="head3">$2.00</h2><BR>
+
+                    </div>
+                    <div class="col-lg-2 secondarycol content">
+                        <h2 class="subhead" id="head3">6 Months</h2>
+                        <img class="imagecenter" src="halfyear.png">
+                                                <h2 class="subhead" id="head3">$10.00</h2><BR>
+
+                    </div>
+                    <div class="col-lg-2 secondarycol content">
+                        <h2 class="subhead" id="head3">1 Year</h2>
+                        <img class="imagecenter" src="year.png">
+                                                <h2 class="subhead" id="head3">$18.00</h2><BR>
+
+                    </div>
+                    <div class="col-lg-2 secondarycol content">
+                        <h2 class="subhead" id="head3">Lifetime</h2>
+                        <img class="imagecenter" src="life.png">
+                                                <h2 class="subhead" id="head3">$40.00</h2><BR>
+
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+
+                <div class="row nobottommargin">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <h1 id="head4">Our Team</h1><BR>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row nobottommargin">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2 secondarycol content">
+                        <img class="pic biohead bioimage" id="jakeadams" src="jake.jpg">
+                        <h2 class="subhead biohead " id="jakeadams">Jake Adams</h2>
+                        <img class="arrow"  id="jakeadamsimg" src="arrowup.png">
+                            <ul class="bio" id="jakeadamsbio">
+                                <li>- Graphic Design -</li>
+                                <li>- Data Collection -</li>
+                                <li>- Communication -</li>
+                            </ul>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 secondarycol content">
+                        <img class="pic biohead bioimage" id="jonahdowns" src="jonah.jpg">
+                        <h2 class="subhead biohead " id="jonahdowns">Jonah Downs</h2>                                                                                <img class="arrow" id="jonahdownsimg"  src="arrowup.png">
+
+                            <ul class="bio" id="jonahdownsbio">
+                                <li>- Management -</li>
+                                <li>- Structure -</li>
+                                <li>- Public Relations -</li>
+                            </ul>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 secondarycol content">
+                        <img class="pic biohead bioimage" id="alexpedersen" src="alex.jpg">
+                        <h2 class="subhead biohead" id="alexpedersen">Alex Pedersen</h2>
+                                                <img class="arrow" id="alexpedersenimg" src="arrowup.png">
+
+                            <ul class="bio" id="alexpedersenbio">
+                                <li>- Architecture -</li>
+                                <li>- Front End -</li>
+                                <li>- Infrastructure -</li>
+                            </ul>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>    
+            <div class="row">
+                 <div class="col-xs-2">
+                </div>
+                <div class="col-xs-8 secondarycol content">
+                <div id="socialmedia">
+<iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fthewarroomvideogame&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+                    <a href="https://twitter.com/warroomgame" class="twitter-follow-button" data-show-count="false">Follow @warroomgame</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </div>  
+                                                         <p style="text-align:center;">Questions? Email us at <a href="mailto:info@warroomgame.com">info@warroomgame.com</a>
+  or call at (717)-743-1378</p>
+                </div>
+                <div class="col-xs-2">
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+    
+</html>
+    
+</html>

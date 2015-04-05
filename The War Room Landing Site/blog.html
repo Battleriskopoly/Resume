@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>The War Room | Blog</title>
+        
+        <link rel="icon" type="image/png" href="favicon.png">
+        
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="main.js"></script>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        
+        <!-- Jquery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+             $("#socialmedia").ready( function(){
+                $("#socialmedia").css("margin-left",($(".content").width() - $("#socialmedia").width())/2)
+             });
+            $(document).ready( function(){
+                setTimeout(function() {
+                                   $("#socialmedia").css("margin-left",($(".content").width() - $("#socialmedia").width())/2) 
+                }, 20); // After 5 secs
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) == true ) {
+                    window.location = "http://www.warroomgame.com/blogmobile.html";
+                }
+                $("#cssmenu").css("margin-left", ($("#navcol").width() - $("#cssmenu").width())/2)
+                        $("#openVideo").remove()
+                        $("#logo").css("opacity","1.0")
+                        $("#logo").css("margin-left","40%")
+                        $("#logo").css("margin-top","2%")
+                        $("#logo").css("width","20%")
+                        $(".secondarycol").css("opacity","1.0")
+                        $(".secondarycol").css("display","inline")
+
+            })
+        </script>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="maincol" class="col-xs-12">
+                         <img id="logo" src="thewarroom.svg" alt="The war Room">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-1">
+                </div>
+                <div class="col-xs-10 secondarycol" id="navcol">
+                <div id='cssmenu'>
+                    <ul>
+                       <li><a href='index.html'><span>Home</span></a></li>
+                       <li><a href='about.html'><span>About</span></a></li>
+                       <li class="active"><a href='blog.html'><span>Blog</span></a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="col-xs-1">
+                </div>
+            </div>
+             <div class="row">
+                 <div class="col-xs-2">
+                </div>
+                <div class="col-xs-8 secondarycol content">
+  <h2>Lorem Ipsum</h2><BR>
+                    <p>The Blaines were attached to no city. They were the Blaines of Lake Geneva; they had quite enough relatives to serve in place of friends, and an enviable standing from Pasadena to Cape Cod. But Beatrice grew more and more prone to like only new acquaintances, as there were certain stories, such as the history of her constitution and its many amendments, memories of her years abroad, that it was necessary for her to repeat at regular intervals. Like Freudian dreams, they must be thrown off, else they would sweep in and lay siege to her nerves. But Beatrice was critical about American women, especially the floating population of ex-Westerners.</p>
+<p>“They have accents, my dear,” she told Amory, “not Southern accents or Boston accents, not an accent attached to any locality, just an accent”—she became dreamy. “They pick up old, moth- eaten London accents that are down on their luck and have to be used by some one. They talk as an English butler might after several years in a Chicago grand-opera company.” She became almost in- coherent—“Suppose—time in every Western woman’s life—she feels her husband is prosperous enough for her to have—accent—they try to impress me, my dear—”</p>
+<p>Though she thought of her body as a mass of frailties, she consid- ered her soul quite as ill, and therefore important in her life. She had once been a Catholic, but discovering that priests were infi- nitely more attentive when she was in process of losing or regaining faith in Mother Church, she maintained an enchantingly wavering attitude. Often she deplored the bourgeois quality of the American Catholic clergy, and was quite sure that had she lived in the shadow of the great Continental cathedrals her soul would still be a thin flame on the mighty altar of Rome. Still, next to doctors, priests were her favorite sport.
+“Ah, Bishop Wiston,” she would declare, “I do not want to talk of myself. I can imagine the stream of hysterical women fluttering at your doors, beseeching you to be simpatico”—then after an interlude filled by the clergyman—“but my mood—is—oddly dissimilar.”</p>
+                </div>
+                <div class="col-xs-2">
+                </div>
+            </div>
+            <div class="row">
+                 <div class="col-xs-2">
+                </div>
+                <div class="col-xs-8 secondarycol content">
+                <div id="socialmedia">
+<iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fthewarroomvideogame&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+                    <a href="https://twitter.com/warroomgame" class="twitter-follow-button" data-show-count="false">Follow @warroomgame</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </div>    
+                </div>
+                <div class="col-xs-2">
+                </div>
+            </div>
+        </div>
+    </body>
+    
+</html>

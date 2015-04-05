@@ -1,0 +1,84 @@
+
+input {
+ font-family:"Adelle"; 
+font-weight:300;
+font-style:normal;     
+}
+            img {
+                position:auto;
+                z-index:0;
+            }
+            h1 {
+                z-index:1;
+z-index:1;
+font-family:"mono45-headline"; 
+font-weight:500;
+            }
+            p {
+font-size:14px;
+font-family:"Adelle"
+            }
+            #navBar {
+                margin-top:50%;   
+            }
+
+            .button {
+                background-image:none;
+                box-shadow:none;
+                line-height:normal;
+                padding: 10px 15px;
+                background: rgba(265,265,265,0.2);
+                font-size:24px;
+                color: black;
+                border-width: 1px;
+                border-color: black;
+
+            }
+            .button:hover {
+                background: rgba(0,0,0,0.1);
+
+            }
+
+            #maincol {
+                                background-color:rgba(163, 71, 163,.7); 
+                                padding-bottom: 15px;
+                                margin-top: 15px;
+            }
+            #title {
+             position:absolute;
+                z-index: -1;
+                text-decoration: underline;
+            }
+            h4 {
+             font-family:"adelle"; 
+font-weight:300;
+    text-decoration: underline;
+
+   
+            }
+#blog:hover {
+    background-color:#CF0000;
+}
+#music:hover {
+    background-color:#0066FF;
+}
+#videos:hover {
+    background-color:#FF6600;
+}
+#home:hover {
+    background-color:rgb(163, 71, 163); 
+}
+body{
+  background-image: url(pattern.png);
+  background-repeat:repeat;
+}
+@font-face {
+    font-family: nimbus;
+    src: url(fonts/nimbus.ttf);
+}
+#bottomrow {
+    width:100%;
+}
+#signature {
+ text-align: right;   
+}

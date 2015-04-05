@@ -1,0 +1,6 @@
+{
+  "name": "thewarroom",
+  "root": "./",
+  "clean_urls": true,
+  "error_page": "index.html"
+}

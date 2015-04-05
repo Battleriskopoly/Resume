@@ -1,0 +1,389 @@
+body {
+ background-color:black !important;  
+     line-height: 2.8rem !important;
+font-family: monospace !important;
+    overflow-y:hidden;
+}
+#openVideo {
+     opacity: 1;  
+     position:absolute;
+     z-index:-1;
+}
+.bio {
+    text-align:center;
+}
+.arrow {
+ width:5%;
+margin-left: 46%;
+    transform:"rotate(90deg)";
+}
+.bodyimage {
+    width:100%;
+    border:2px solid white;
+
+}
+ul {
+    padding-left:0px !important;
+    list-style-type: none !important;
+}
+ul li {
+    list-style-type: none !important;
+    
+}
+#logo {
+    position:static;
+    z-index:2; 
+    margin-left:35%;
+    margin-top:20%;
+    opacity:0.0;
+    width:30%;
+}
+.toplevel {
+ width:100% !important; 
+ margin-left:0px !important;   
+ margin-right:0px !important;   
+
+}
+.imagecenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.subheadsel {
+       color: #1cbcbb !important;
+}
+h1 {
+  font-family:"couriercode" !important;  
+   color: #1cbcbb !important;
+    margin-left:-5% !important;
+    
+}
+#title {
+    margin-top:0px;
+    font-size:4em!important;
+    text-align:center;
+    font-family:"couriercode" !important; 
+   color: #1cbcbb !important;
+    
+}
+.bioimage {
+    width:75%;
+    margin-left:12.5%;
+}
+.bodysubhead {
+ text-align: left !important; 
+    margin-left:-2.5%;
+}
+.subhead {
+    font-family:"couriercode" !important;  
+    color: white ;
+    font-size:1.5em !important;
+    text-align:center ;
+    margin-bottom:20px;
+}
+.biohead {
+ margin-bottom:0px !important;   
+}
+p {
+    font-family:monospace;
+    font-size:16px !important;   
+}
+
+
+.content {
+color:white;
+}
+.row {
+ padding-bottom:30px;   
+}
+.nobottommargin {
+ padding-bottom:0px !important;   
+}
+.content {
+    opacity:0.0;
+    display:none;
+}
+.secondarycol {
+    opacity:0.0; 
+}
+@-webkit-keyframes logoOpacity {
+    from {opacity:0.0;}
+    to {opacity:1.0;}
+}
+@-webkit-keyframes videoOpacity {
+    from {opacity:1.0;}
+    to {opacity:0.0;}
+}
+@-webkit-keyframes logoFlyUp {
+    from {margin-top:20%;}
+    to {margin-top:2%;}
+
+}
+@-webkit-keyframes logoGetSmall {
+    from {width:30%;}
+    to {width:20%;}
+}
+@-webkit-keyframes copensateSize {
+    from {margin-left:35%;}
+    to {margin-left:40%;}
+}
+@-webkit-keyframes secondarycolDisplay {
+    from {opacity:0.0;}
+    to {opacity:1.0;}
+}
+@-moz-keyframes logoOpacity {
+    from {opacity:0.0;}
+    to {opacity:1.0;}
+}
+@-moz-keyframes videoOpacity {
+    from {opacity:1.0;}
+    to {opacity:0.0;}
+}
+@-moz-keyframes logoFlyUp {
+    from {margin-top:20%;}
+    to {margin-top:2%;}
+
+}
+@-moz-keyframes logoGetSmall {
+    from {width:30%;}
+    to {width:20%;}
+}
+@-moz-keyframes copensateSize {
+    from {margin-left:35%;}
+    to {margin-left:40%;}
+}
+@-moz-keyframes secondarycolDisplay {
+    from {opacity:0.0;}
+    to {opacity:1.0;}
+}
+@-ms-keyframes logoOpacity {
+    from {opacity:0.0;}
+    to {opacity:1.0;}
+}
+@-ms-keyframes videoOpacity {
+    from {opacity:1.0;}
+    to {opacity:0.0;}
+}
+@-ms-keyframes logoFlyUp {
+    from {margin-top:20%;}
+    to {margin-top:2%;}
+
+}
+@-ms-keyframes logoGetSmall {
+    from {width:30%;}
+    to {width:20%;}
+}
+@-ms-keyframes copensateSize {
+    from {margin-left:35%;}
+    to {margin-left:40%;}
+}
+@-ms-keyframes secondarycolDisplay {
+    from {opacity:0.0;}
+    to {opacity:1.0;}
+}
+@-webkit-keyframes oneapear {
+    from {opacity:0.0;}
+    to {opacity:1.0;}
+}
+@-moz-keyframes oneapear {
+    from {opacity:0.0;}
+    to {opacity:1.0;}
+    
+}
+@-ms-keyframes oneapear {
+    from {opacity:0.0;}
+    to {opacity:1.0;}
+
+}
+@-webkit-keyframes onedisapear {
+    from {opacity:1.0;}
+    to {opacity:0.0;}
+}
+@-moz-keyframes onedisapear {
+    from {opacity:1.0;}
+    to {opacity:0.0;}
+}
+@-ms-keyframes onedisapear {
+    from {opacity:1.0;}
+    to {opacity:0.0;}
+}
+@-webkit-keyframes rotatearrow {
+    from {transform:90deg;}
+    to {transform:90deg;}
+}
+@-moz-keyframes rotatearrow {
+    from {transform:90deg;}
+    to {transform:90deg;}
+}
+@-ms-keyframes rotatearrow {
+    from {transform:90deg;}
+    to {transform:90deg;}
+}
+@-webkit-keyframes rerotatearrow {
+    from {transform:0deg;}
+    to {transform:0deg;}
+}
+@-moz-keyframes rerotatearrow {
+    from {transform:0deg;}
+    to {transform:0deg;}
+}
+@-ms-keyframes rerotatearrow {
+    from {transform:0deg;}
+    to {transform:0deg;}
+}
+.rotatearrow {
+            -webkit-animation: rotatearrow .25s;
+               -moz-animation: rotatearrow .25s;
+}
+.rerotatearrow {
+            -webkit-animation: rerotatearrow .25s;
+               -moz-animation: rerotatearrow .25s;
+}
+.opacityanimationlogo {
+    -webkit-animation: logoOpacity 2s;
+        -moz-animation: logoOpacity 2s;
+}
+.opacityanimationvideo {
+       -webkit-animation: videoOpacity 2s;
+           -moz-animation: videoOpacity 2s;
+
+}
+.flyupanimationlogo {
+       -webkit-animation: logoFlyUp 2s, logoGetSmall 2s, copensateSize 2s;
+           -moz-animation: logoFlyUp 2s, logoGetSmall 2s, copensateSize 2s;
+
+}
+.displayanimationsecondarycol {
+           -webkit-animation: secondarycolDisplay 2s;
+               -moz-animation: secondarycolDisplay 2s;
+
+}
+.titleapear {
+               -webkit-animation: secondarycolDisplay 2s;
+                   -moz-animation: secondarycolDisplay 2s;
+
+}
+.oneapear {
+                -webkit-animation: oneapear .25s;
+                -moz-animation: oneapear .25s;
+
+}
+.onedisapear {
+                -webkit-animation: onedisapear .25s;
+                -moz-animation: onedisapear .25s;
+
+}
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+#cssmenu {
+    text-align:center;
+}
+#cssmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+  zoom: 1;
+}
+#cssmenu ul:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+#cssmenu ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+#cssmenu.align-right ul li {
+  float: right;
+}
+#cssmenu.align-center ul {
+  text-align: right;
+}
+#cssmenu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 15px 25px;
+  font-family: 'couriercode';
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 3em;
+  position: relative;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+#cssmenu ul li a:hover {
+  color: #1cbcbb;
+}
+#cssmenu ul li a:hover:before {
+  width: 100%;
+}
+#cssmenu ul li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -5px;
+  top: 31px;
+  height: 6px;
+  width: 6px;
+  background: #ffffff;
+  opacity: .5;
+}
+
+#cssmenu ul li.last > a:after,
+#cssmenu ul li:last-child > a:after {
+  display: none;
+}
+#cssmenu ul li.active a {
+  color: #1cbcbb;
+}
+#cssmenu ul li.active a:before {
+  width: 100%;
+}
+#cssmenu.align-right li.last > a:after,
+#cssmenu.align-right li:last-child > a:after {
+  display: block;
+}
+#cssmenu.align-right li:first-child a:after {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #cssmenu ul li {
+    float: none;
+    display: block;
+  }
+  #cssmenu ul li a {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #1cbcbb;
+  }
+  #cssmenu ul li.last > a,
+  #cssmenu ul li:last-child > a {
+    border: 0;
+  }
+  #cssmenu ul li a:after {
+    display: none;
+  }
+  #cssmenu ul li a:before {
+    display: none;
+  }
+}
+
+@font-face {
+    font-family: couriercode;
+    src: url(couriercode.ttf);
+}
+
+.pic {
+    border:2px solid white;
+}

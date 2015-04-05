@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="The War Room is an online war simulator game. Battle your friends and dominate the world.">
+        <title>The War Room</title>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <!-- Latest compiled and minified CSS below-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <!-- Optional theme below -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <!-- Jquery  below-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            function set_cookie( cookie_name, cookie_value, lifespan_in_days, valid_domain ) {
+                  var domain_string = valid_domain ? ("; domain=" + valid_domain) : '' ;
+                  document.cookie = cookie_name + "=" + encodeURIComponent( cookie_value ) +
+                      "; max-age=" + 60 * 60 * 24 * lifespan_in_days +
+                      "; path=/" + domain_string ;
+            }
+            function get_cookie ( cookie_name )
+            {
+              // http://www.thesitewizard.com/javascripts/cookies.shtml
+              var cookie_string = document.cookie ;
+              if (cookie_string.length != 0) {
+                var cookie_value = cookie_string.match ( '(^|;)[\s]*' + cookie_name + '=([^;]*)' );
+                return decodeURIComponent ( cookie_value[2] ) ;
+              }
+              return '' ;
+            }
+
+            $(document).ready( function(){
+                $(".biohead").click( function(e) {
+                if ($("#" + this.id + "bio").css("opacity") == "1") {
+                    var element = $("#" + this.id + "bio")[0]
+                  element.preventDefault;
+
+                  // -> removing the class
+                  element.classList.remove("oneapear");
+
+                  // -> triggering reflow /* The actual magic */
+                  // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+                  element.offsetWidth = element.offsetWidth;
+
+                  // -> and re-adding the class
+                  element.classList.add("onedisapear");
+                    $("#" + this.id + "bio").css("opacity","0.0")
+                    $("h2#" + this.id).css("color","white")
+                    
+                }
+                else {                
+                for (var i =0; i < $(".oneapear").not("#" + this.id + "bio").length; i++ ) {
+                    var element = $(".oneapear").not("#" + this.id + "bio")[i]
+                    $(element).css("opacity","0.0")
+                      element.preventDefault;
+
+                      // -> removing the class
+                      element.classList.remove("oneapear");
+
+                      // -> triggering reflow /* The actual magic */
+                      // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+                      element.offsetWidth = element.offsetWidth;
+                      element.classList.add("onedisapear");
+
+                      // -> and re-adding the class
+                }
+                for (var i =0; i < $(".rerotatearrow").not("#" + this.id + "img").length; i++ ) {
+                    var element = $(".rerotatearrow").not("#" + this.id + "img")[i]
+                    $(element).css("transform","0deg")
+                      element.preventDefault;
+
+                      // -> removing the class
+                      element.classList.remove("rerotatearrow");
+
+                      // -> triggering reflow /* The actual magic */
+                      // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+                      element.offsetWidth = element.offsetWidth;
+                      element.classList.add("rotatearrow");
+
+                      // -> and re-adding the class
+                }
+                    var element = $("#" + this.id + "img")[i]
+
+                      element.preventDefault;
+
+                      // -> removing the class
+                      element.classList.remove("rerotatearrow");
+
+                      // -> triggering reflow /* The actual magic */
+                      // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+                      element.offsetWidth = element.offsetWidth;
+                      element.classList.add("rotatearrow");
+                    
+                    $(element).css("transform","90deg")
+                    $(".biohead").css("color","white")
+                    var element = $("#" + this.id + "bio")[0]
+                  element.preventDefault;
+
+                  // -> removing the class
+                  element.classList.remove("onedisapear");
+
+                  // -> triggering reflow /* The actual magic */
+                  // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+                  element.offsetWidth = element.offsetWidth;
+
+                  // -> and re-adding the class
+                  element.classList.add("oneapear");
+                    $("#" + this.id + "bio").css("opacity","1.0")
+                    $("h2#" + this.id ).css("color","#1cbcbb")
+                }
+                })
+                console.log(($(".content").width() - $("#socialmedia").width()))
+                $("#socialmedia").css("margin-left",($(".content").width() - $("#socialmedia").width())/2)
+                $("#cssmenu").css("margin-left", ($("#navcol").width() - $("#cssmenu").width())/2)
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) == true ) {
+                    window.location = "http://www.warroomgame.com/indexmobile.html";
+                }
+
+                if (get_cookie("visitor") == "true") {
+                        $("#openVideo").remove()
+                        $("body").css("overflow-y","visible")
+                        $("#logo").css("opacity","1.0")
+                        $("#logo").css("margin-left","40%")
+                        $("#logo").css("margin-top","2%")
+                        $("#logo").css("width","20%")
+
+                        $(".secondarycol").css("opacity","1.0")
+                        $(".secondarycol").css("display","inline")
+                        setTimeout(function() {
+                            console.log($("#socialmedia").width() )
+                                           $("#socialmedia").css("margin-left",($(".content").width() - $("#socialmedia").width())/2) 
+                        }, 40); // After 5 secs    
+                }
+                else {
+                    set_cookie("visitor","true", 365, "warroomgame.com")
+                        if ($(window).width() > 1920) {
+                            $("#openVideo").attr("width","1920px")   
+                            $("#openVideo").attr("height","1080px")   
+                            $("#openVideo").css("margin-left",($(window).width() - 1920)/2)   
+                            $("#openVideo").css("margin-top",($(window).height() - 1080)/2)   
+                        }
+                        $("#openVideo").on("timeupdate", function(e) {
+                            if (this.currentTime > 3) {
+                                $("#logo").addClass("opacityanimationlogo")
+                                $("#logo").css("opacity","1.0")
+                            }
+                        });
+                        $("#openVideo").bind("ended", function() {
+                                setTimeout(function() {
+                                    console.log($("#socialmedia").width() )
+                                                   $("#socialmedia").css("margin-left",($(".content").width() -                 $("#socialmedia").width())/2) 
+                                }, 40); // After 5 secs                                 $("#openVideo").addClass("opacityanimationvideo")
+                                                    $("body").css("overflow-y","visible")
+
+                                $("#openVideo").css("opacity","0.0")
+                                $("#logo").addClass("flyupanimationlogo")
+                                $("#logo").css("margin-left","40%")
+                                $("#logo").css("margin-top","2%")
+                                $("#logo").css("width","20%")
+                                $("#openVideo").remove()
+                                $(".secondarycol").addClass("displayanimationsecondarycol")
+                                $(".secondarycol").css("opacity","1.0")
+                                $(".secondarycol").css("display","inline")
+
+
+                        })
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <div class="container toplevel">
+            <div class="row">
+                <div id="maincol" class="col-lg-12">
+                        <video id="openVideo" width="100%" height="auto" autoplay>
+                            <source src="open.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <img id="logo" src="thewarroom.svg" alt="The war Room">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 secondarycol" id="navcol">
+                    <h4 id="title">The War Room</h4>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <p>Welcome to the War Room - your world superpower simulator. 38 territories, a zoomable map, and accurate stats make the user experience out of this world. Each territory starts with one capital fortress, and players can build additional forts to conquer the world. Resources are produced daily by an empire and traded between players. When a capital fortress trades hands, so does the terriory, and the only way to win is to control the entire map.</p><br>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <h1 id="head1">Rule Your Empire</h1><BR>
+                        <p>Claim your empire and rule it with undisputed power. Your strategy and success depend upon the geography and resources of your land. Once daily, each territory in your control produces resources. Throughout the day, some of these resources are consumed by the population to survive. To rule the world and win the game you must keep the balance of production and consumption in check.</p><br>
+                        <img class="bodyimage" src="fullmap.png"><br><br>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <h1 id="head1">Develop Your Territories</h1><BR>
+                        <p>Build forts and camps around the world to hold resources, conduct trade, and execute battle. Encampments are cheap and temporary. They may be placed in any territory and their limited visibility promotes secret diplomacy. Fortresses are strongholds to defend territories and maintain power. They may be placed only in controlled territories and are visible to all players. The ability to effectively balance the two types of structures is what can make or break your conquest experience.</p><br>
+                        <img class="bodyimage" src="development.png"><br><br>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <h1 id="head1">Trade With Allies</h1><BR>
+                        <p>No territory is perfect. The scarcity of each resource varies across the map. Trade must be leveraged to build your empire and keep the population alive. Shipment comes at a cost and takes time to complete. The price of a shipment depends on the length of the route, the amount of goods being shipped, and the infrastructure of the territory in which goods are being shipped. Any two things can be traded -  including information. If two players decide to trade secrets, resources can be "gifted" in a tactical, honor system agreement.</p><br>
+                        <img class="bodyimage" src="trade.png"><br><br>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <h1 id="head1">Battle With Enemies</h1><BR>
+                        <p>For the game to end, all territories must be controlled by one player: the winner. In each game you will start with an empire that is comprised of adjacent territories. Only through battle may you expand your empire and dominate the world. Each territory starts with an army. Each game peice represents a certain number of soldiers, and when that peice is gone, so are those troops. By battling a fortress or encampment successfully you win control of that location. Ownership of the territory lies in ownership of the capital fortress.</p><br>
+                        <img class="bodyimage" src="battle.png"><br><br>
+                        <h2 class="subhead bodysubhead">Battle on Land</h2><BR>
+                        <p> Play Battle on Land when fighting territories connected by land. It's chess; pretty self explanatory.</p><br>
+                        <img class="bodyimage" src="battleatland.png"><br><br>
+                        <h2 class="subhead bodysubhead">Battle at Sea</h2><BR>
+                        <p>Play Battle at Sea when fighting across oceans. Place your ships on the grid, and fire random shots at the enemy to sink their fleat.</p><br>
+                        <img class="bodyimage" src="battleatsea.png"><br><br>
+
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <h1 id="head1">Conspire Offline</h1><BR>
+                        <p>While the War Room is an effective diplomacy portal, we highly encourage you to conspire offline. The actions taken online are only as entertaining as the ideas they stand for, and the embodiment of those ideas is what can make the game experience fantastic. With means such as social media, word processors, and file sharing sites, you can take the politics of the War Room into the real spheres of the internet.</p><br>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row nobottommargin">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <h1 id="head3">The Cost of War</h1>
+                        <p>As much as we'd all like to make The War Room free, there are costs associated with hosting this game. We offer the first month of gameplay at no charge; No payment method necessary; No commitment required. Beyond the first month, the cost of war is well outlined below.</p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row nobottommargin">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2 secondarycol content">
+                        <h2 class="subhead" id="head3">1 Month</h2>
+                        <img class="imagecenter" src="month.png">
+                    </div>
+                    <div class="col-lg-2 secondarycol content">
+                        <h2 class="subhead" id="head3">6 Months</h2>
+                        <img class="imagecenter" src="halfyear.png">
+                    </div>
+                    <div class="col-lg-2 secondarycol content">
+                        <h2 class="subhead" id="head3">1 Year</h2>
+                        <img class="imagecenter" src="year.png">
+                    </div>
+                    <div class="col-lg-2 secondarycol content">
+                        <h2 class="subhead" id="head3">Lifetime</h2>
+                        <img class="imagecenter" src="life.png">
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2 secondarycol content">
+                        <h2 class="subhead" id="head3">$2.00</h2><BR>
+                    </div>
+                    <div class="col-lg-2 secondarycol content">
+                        <h2 class="subhead" id="head3">$10.00</h2><BR>
+                    </div>
+                    <div class="col-lg-2 secondarycol content">
+                        <h2 class="subhead" id="head3">$18.00</h2><BR>
+                    </div>
+                    <div class="col-lg-2 secondarycol content">
+                        <h2 class="subhead" id="head3">$40.00</h2><BR>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row nobottommargin">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 secondarycol content">
+                        <h1 id="head4">Our Team</h1><BR>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row nobottommargin">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2 secondarycol content">
+                        <img class="pic biohead bioimage" id="jakeadams" src="jake.jpg">
+                        <h2 class="subhead biohead " id="jakeadams">Jake Adams</h2>
+                        <img class="arrow"  id="jakeadamsimg" src="arrowup.png">
+                            <ul class="bio" id="jakeadamsbio">
+                                <li>- Graphic Design -</li>
+                                <li>- Data Collection -</li>
+                                <li>- Communications -</li>
+                            </ul>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 secondarycol content">
+                        <img class="pic biohead bioimage" id="jonahdowns" src="jonah.jpg">
+                        <h2 class="subhead biohead " id="jonahdowns">Jonah Downs</h2>                                                                                <img class="arrow" id="jonahdownsimg"  src="arrowup.png">
+
+                            <ul class="bio" id="jonahdownsbio">
+                                <li>- Management -</li>
+                                <li>- Structure -</li>
+                                <li>- Public Relations -</li>
+                            </ul>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 secondarycol content">
+                        <img class="pic biohead bioimage" id="alexpedersen" src="alex.jpg">
+                        <h2 class="subhead biohead" id="alexpedersen">Alex Pedersen</h2>
+                                                <img class="arrow" id="alexpedersenimg" src="arrowup.png">
+
+                            <ul class="bio" id="alexpedersenbio">
+                                <li>- Architecture -</li>
+                                <li>- Front End -</li>
+                                <li>- Infrastructure -</li>
+                            </ul>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>    
+            <div class="row">
+                 <div class="col-xs-2">
+                </div>
+                <div class="col-xs-8 secondarycol content">
+                <div id="socialmedia">
+<iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fthewarroomvideogame&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+                    <a href="https://twitter.com/warroomgame" class="twitter-follow-button" data-show-count="false">Follow @warroomgame</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </div>
+                    <p style="text-align:center;">Questions? Email us at <a href="mailto:info@warroomgame.com">info@warroomgame.com</a>
+  or call at (717)-743-1378</p>
+
+                </div>
+                <div class="col-xs-2">
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>

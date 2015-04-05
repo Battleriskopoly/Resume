@@ -1,0 +1,51 @@
+/* Article Styling */
+
+.header {
+    padding:15px;
+}
+
+hr {
+    border-color:#333333;
+    border-width:2px;
+}
+#headerHr {
+    width:150%;
+    margin-left:-25%;
+}
+.article {
+    overflow:hidden;
+ }
+.col-xs-12 > .article {
+    width:100%;
+}
+.articleImage {
+    width:100%;
+}
+.headline {
+    text-transform:uppercase;
+    margin-left:15px;
+}
+.description {
+    margin-left:15px;
+}
+.article > div {
+    background:rgba(250,250,250,0.8);
+}
+.col-xs-6 > .article {
+    margin-left:10px;
+}
+.col-xs-6:first-child{
+    margin-left:-5px !important;
+}
+.col-xs-8 > .col-xs-12{
+    margin-left:0px !important;
+}
+.articleImage > img {
+    min-width:100%;
+    min-height:500px;
+}
+.articleImage {
+    overflow:hidden;
+}
+
+

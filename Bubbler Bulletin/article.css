@@ -1,0 +1,260 @@
+/* Font Declarations */
+@font-face {
+    font-family: pressura;
+    src: url(pressura.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: bebas;
+    src: url(bebas.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: spinoza;
+    src: url(spinoza.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: spinoza;
+    src: url(spinozai.woff);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: spinoza;
+    src: url(spinozab.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: bitter;
+    src: url(bitterbi.otf);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: josefin;
+    src: url(josefinbi.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+/* Common To All Pages */
+
+body {
+    font-family: spinozai;
+    background-color:#fafafa;
+    overflow-y: hidden;
+    font-size:20px;
+    color:#333333;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#logo {
+    width:100%;
+}
+    /* Nav Bar */
+
+    #cssmenu {
+        text-align:center;
+        display:inline;
+    }
+    #cssmenu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        display: block;
+        zoom: 1;
+    }
+    #cssmenu ul:after {
+        content: " ";
+        display: block;
+        font-size: 0;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+
+    }
+    #cssmenu ul li {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+    #cssmenu.align-right ul li {
+        float: right;
+    }
+    #cssmenu.align-center ul {
+        text-align: center;
+    }
+    #cssmenu ul li a {
+        color: #333333;
+        text-decoration: none;
+        display: block;
+        padding: 15px 25px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        font-size: .75em;
+        position: relative;
+        -webkit-transition: color .25s;
+        -moz-transition: color .25s;
+        -ms-transition: color .25s;
+        -o-transition: color .25s;
+        transition: color .25s;
+    }
+    #cssmenu ul li a:hover {
+        color: #742BC2;
+    }
+    #cssmenu ul li a:hover:before {
+        background-color:#742BC2;
+        width: 100%;
+    }
+    #cssmenu ul li a:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: -3px;
+        top: 14px;
+        height: 6px;
+        width: 6px;
+        opacity: .5;
+    }
+    #cssmenu ul li a:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 0;
+        background-color:#742BC2;
+        -webkit-transition: width .25s;
+        -moz-transition: width .25s;
+        -ms-transition: width .25s;
+        -o-transition: width .25s;
+        transition: width .25s;
+    }
+    #cssmenu ul li.last > a:after,
+    #cssmenu ul li:last-child > a:after {
+        background-color:#333333;
+
+        display: none;
+    }
+    #cssmenu ul li.active a {
+        background-color:#333333;
+    }
+    #cssmenu ul li.active a:before {
+        width: 100%;
+    }
+    #cssmenu.align-right li.last > a:after,
+    #cssmenu.align-right li:last-child > a:after {
+        display: block;
+        background-color:#333333;
+
+    }
+    #cssmenu.align-right li:first-child a:after {
+        display: none;
+        background-color:#333333;
+
+    }
+    @media screen and (max-width: 768px) {
+        #cssmenu ul li {
+            float: none;
+            display: block;
+        }
+        #cssmenu ul li a {
+            width: 100%;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        #cssmenu ul li.last > a,
+        #cssmenu ul li:last-child > a {
+            border: 0;
+        }
+        #cssmenu ul li a:after {
+            display: none;
+        }
+        #cssmenu ul li a:before {
+            display: none;
+        }
+    }
+/* Article Styling */
+
+.header {
+    padding:15px;
+    margin-bottom:50px;
+}
+
+    /* By Line */
+
+    .storyInfo {
+        border: 2px solid #333333;
+        border-left:none;
+        padding:4px;
+        width:16%;
+        color:#333333;
+        font-weight:bold;
+        background-color:rgba(250,250,250,0.8);
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .storyInfo > h3, .storyInfo > p  {
+        margin-top:0px;
+        margin-bottom:0px;
+        font-size:18px;
+    }
+
+    /* Headline */
+
+    .headline {
+        border: 2px solid #333333;
+        border-left:none;
+        border-right:none;
+        text-transform: uppercase;
+        font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-align:center;
+        font-size:4em;
+        background-color:rgba(250,250,250,0.8);
+    }
+.color {
+    padding-bottom:15px;
+    background-size: 100%;
+}
+.fullImage {
+    width:100%;
+    visibility:hidden;
+    max-height: 75%;
+}
+
+.marginImage {
+    width:100%;
+}
+
+.caption {
+    font-style:italic;
+    width:100%;
+    font-size:16px;
+    margin-top:0px;
+    padding-top:5px;
+    padding-left:1%;
+    padding-right:1%;
+}
+.storyContent {
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+a:hover {
+    color: #333333;
+}
+a {
+    color: #333333;
+}
+#closer {
+    width:20px;
+    display:inline;
+}

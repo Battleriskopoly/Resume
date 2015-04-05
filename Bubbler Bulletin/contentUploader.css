@@ -1,0 +1,125 @@
+#contentField {
+    width:7.5in;
+    height:10in;
+    overflow:scroll;
+    border-color:#333333;
+    border-width:2px;
+    border-style: solid;
+    padding:0.5in;
+    font-family: spinozai;
+    font-size:20px;
+    color:#333333;
+
+}
+#mainBar {
+    height:32px;
+}
+#commandBar {
+    width:8.5in;
+}
+.icon {
+    height:32px;
+}
+.icon:hover {
+    fill: #742BC2;
+}
+.lastIcon {
+    margin-right:6%;
+}
+#metaData {
+    width:8.5in;
+}
+#title {
+    border-color:#333333;
+    border-width:2px;
+    border-style: solid;
+    height:25px;
+    background-color:#fafafa;
+    font-family: "Helvetica Neue";
+    font-size:20px;
+    color:#777777;
+    width:7in;
+}
+#contentField > * {
+    font-family: spinozai;
+    font-size:20px;
+    color:#333333;
+}
+#file {
+    display:none;
+}
+#contentField > img {
+    width:100%;
+}
+#contentField > p {
+    text-align:justify;
+}
+button {
+    padding:0px;
+    margin:0px;
+    background-color:inherit;
+    border:0px;
+}
+#strikethrough,#quote,#right {
+    margin-right:6%;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size:2em !important;
+}
+blockquote {
+    font-family:josefin !important;
+    font-style:italic !important;
+    font-size:25px !important;
+    margin-left:160px !important;
+    width:200px !important;
+}
+#contextMenu {
+    box-shadow: 9px 11px 6px -4px rgba(51,51,51,0.36);
+    width:150px;
+    position:absolute;
+    display:none;
+    z-index:10;
+}
+
+#contextMenu > * {
+    border-color:#333333;
+    border-width:2px;
+    border-style: solid;
+    border-bottom-width:0px;
+    border-top-width:0px;
+    display:block;
+    font-size:16px;
+    width:150px;
+    text-align:left;
+    padding:5px;
+    background-color:#fafafa;
+
+}
+#contextMenu > *:hover {
+   color:#742BC2;
+}
+#bold2 {
+    border-top-width:2px;
+}
+#center2 {
+    border-bottom-width:2px;
+}
+#strikethrough2 ,#quote2 {
+    border-bottom-width:2px;
+}
+#logo {
+    width:50%;
+}
+#submit {
+    color:#fafafa;
+    background-color:#333333;
+    border-color:#333333;
+    border-width:2px;
+    border-style: solid;
+    height:31px !important;
+    font-size:20px;
+    border-bottom:3px;
+    margin-left:0.1in;
+    width:1.3in;
+}

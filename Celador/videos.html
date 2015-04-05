@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstraptweaks.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="//use.typekit.net/fbm3zrm.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <title>Celadore - Videos</title>
+                <script>
+            $(window).load( function() {
+                            console.log($(window).height())
+
+            function isOverflowed(element){
+                return element.height() > $(window).height();
+            }
+                if (isOverflowed($("body")) != true) {
+                 
+                   $("#bottomrow").css("position","fixed")
+                    $("#bottomrow").css("bottom","0px")
+                }
+            });
+        </script>
+	</head>
+	
+	<body>
+        <div class="container-fluid">
+            
+            <div class="row">
+                <div class="col-xs-2">
+                    <h1 id="title">Celadore</h1>
+                    <div id="navBar">
+                <form action="/index.html">
+                    <input class="button" id="home" type="submit" value="Home">
+                </form>
+                    <br>
+                <form action="/music.html">
+                    <input class="button" type="submit" id="music" value="Music">
+                </form>
+                <br>
+                <form action="/blog.html">
+                    <input class="button" type="submit" id="blog" value="Blog">
+                </form>
+                    </div>
+                </div>
+                <div class="col-xs-9" id="maincol"  style="background-color:rgba(255,102,0,.7)">
+                    <br>
+                    <h1>Can't Stop - Chili Peppers Cover</h1><br>
+                    <iframe width="100%" height="480" src="http://www.youtube.com/embed/lhD9MjgJ_BI" frameborder="0" allowfullscreen></iframe>
+                </div>                
+            </div>    
+            <div class="row">
+                <div class="col-xs-2">
+                </div>
+                <div class="col-xs-9" id="maincol"  style="background-color:rgba(255,102,0,.7)">
+                    <br>
+                    <h1>Are You Gonna Be My Girl - Jet</h1><br>
+                    <iframe width="100%" height="480" src="http://www.youtube.com/embed/i9CtOZr93E4" frameborder="0" allowfullscreen></iframe>                </div>                
+            </div> 
+            <div class="row" id="bottomrow">
+                <div class="col-xs-2">
+                </div>
+                <div class="col-xs-9">
+                                        <BR>
+
+                <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fceladore&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:100px;" allowTransparency="true"></iframe>
+                <p id="signature">Created by Alex Pedersen - 2015 &copy</p>
+                </div>
+        </div>
+        </div>
+	</body>
+</html>
